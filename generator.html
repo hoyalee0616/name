@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이름 짓기 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="generator">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a class="is-active" href="./generator.html">이름 짓기</a>
+      <a href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a href="./seasonal.html">계절별 순위</a>
+      <a href="./insights.html">트렌드·통계</a>
+      <a href="./special.html">특별한 이름</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero mint">
+      <p>이름 짓기</p>
+      <h1>느낌부터 고르면<br />이름이 따라와요.</h1>
+    </section>
+    <section class="two-column">
+      <form class="panel" id="name-form">
+        <label><span>성씨</span><input type="text" id="surname" maxlength="2" value="김" /></label>
+        <label>
+          <span>성별 이미지</span>
+          <select id="gender">
+            <option value="neutral">중성적</option>
+            <option value="girl">여아 느낌</option>
+            <option value="boy">남아 느낌</option>
+          </select>
+        </label>
+        <label>
+          <span>원하는 무드</span>
+          <select id="style">
+            <option value="modern">세련되고 도시적인 느낌</option>
+            <option value="soft">부드럽고 맑은 느낌</option>
+            <option value="classic">단정하고 클래식한 느낌</option>
+            <option value="smart">지적이고 또렷한 느낌</option>
+          </select>
+        </label>
+        <label>
+          <span>강조하고 싶은 가치</span>
+          <div class="chip-group" id="traits">
+            <button type="button" class="chip is-active" data-trait="wisdom">지혜</button>
+            <button type="button" class="chip" data-trait="warmth">따뜻함</button>
+            <button type="button" class="chip" data-trait="clarity">맑음</button>
+            <button type="button" class="chip" data-trait="grace">품격</button>
+            <button type="button" class="chip" data-trait="joy">기쁨</button>
+            <button type="button" class="chip" data-trait="strength">강인함</button>
+          </div>
+        </label>
+        <label><span>선호 시작 음절</span><input type="text" id="preferred-syllable" maxlength="1" placeholder="예: 서, 하, 준" /></label>
+        <button class="button button-dark button-wide" type="submit">이름 후보 만들기</button>
+      </form>
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-mini">추천 결과</p>
+            <h2>오늘의 이름 후보</h2>
+          </div>
+          <button class="button button-light" id="shuffle-button" type="button">다시 뽑기</button>
+        </div>
+        <div class="panel-note" id="result-summary">성씨와 분위기를 입력하면 어울리는 이름을 추천해드려요.</div>
+        <div class="card-list" id="name-list"></div>
+      </section>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

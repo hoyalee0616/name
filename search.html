@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이름 검색 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="search">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a href="./generator.html">이름 짓기</a>
+      <a class="is-active" href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a href="./seasonal.html">계절별 순위</a>
+      <a href="./insights.html">트렌드·통계</a>
+      <a href="./special.html">특별한 이름</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero yellow">
+      <p>이름 검색</p>
+      <h1>궁금한 이름 하나,<br />재밌게 파헤쳐봐요.</h1>
+    </section>
+    <section class="two-column">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-mini">직접 검색</p>
+            <h2>이름 검색</h2>
+          </div>
+        </div>
+        <label><span>이름 입력</span><input type="text" id="name-search-input" placeholder="예: 서윤, 도윤, 민준" /></label>
+        <div class="button-row">
+          <button class="button button-dark" type="button" id="name-search-button">검색</button>
+          <button class="button button-light" type="button" id="name-search-random">랜덤 이름</button>
+        </div>
+        <div id="name-search-result" class="result-box"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-mini">초성 검색</p>
+            <h2>초성으로 찾기</h2>
+          </div>
+        </div>
+        <label><span>초성 입력</span><input type="text" id="chosung-input" placeholder="예: ㅅㅇ, ㄷㅇ" /></label>
+        <button class="button button-dark" type="button" id="chosung-button">초성 검색</button>
+        <div class="chip-group suggestion-wrap" id="chosung-suggestions"></div>
+        <div class="card-list compact" id="chosung-result"></div>
+      </section>
+    </section>
+  </main>
+  <script src="./data/baby-name-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

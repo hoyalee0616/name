@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>특별한 이름 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="special">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a href="./generator.html">이름 짓기</a>
+      <a href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a href="./seasonal.html">계절별 순위</a>
+      <a href="./insights.html">트렌드·통계</a>
+      <a class="is-active" href="./special.html">특별한 이름</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero lavender">
+      <p>특별한 이름</p>
+      <h1>성격 있는 이름만<br />쏙쏙 모아보기.</h1>
+    </section>
+    <section class="panel">
+      <div class="chip-group" id="special-filter">
+        <button type="button" class="chip is-active" data-category="neutral">중성적인 이름</button>
+        <button type="button" class="chip" data-category="pure">우리말 이름</button>
+        <button type="button" class="chip" data-category="unique">유일한 이름</button>
+        <button type="button" class="chip" data-category="long">긴 이름</button>
+      </div>
+      <div class="special-grid" id="special-list"></div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

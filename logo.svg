@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Badge background: yellow rounded square -->
+  <rect x="1.5" y="1.5" width="45" height="45" rx="14" fill="#ffd84d" stroke="#1f1a17" stroke-width="3"/>
+  <!-- Mint accent dot (top-right) -->
+  <circle cx="36.5" cy="11.5" r="5.5" fill="#7bf0d0" stroke="#1f1a17" stroke-width="2.5"/>
+  <!-- Peach accent dot (bottom-left) -->
+  <circle cx="11.5" cy="37" r="4" fill="#ffb88c" stroke="#1f1a17" stroke-width="2"/>
+  <!-- "이름" text -->
+  <text x="22" y="31"
+    text-anchor="middle"
+    font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif"
+    font-size="15"
+    font-weight="900"
+    fill="#1f1a17">이름</text>
+</svg>

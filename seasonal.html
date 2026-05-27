@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계절별 순위 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="seasonal">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a href="./generator.html">이름 짓기</a>
+      <a href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a class="is-active" href="./seasonal.html">계절별 순위</a>
+      <a href="./insights.html">트렌드·통계</a>
+      <a href="./special.html">특별한 이름</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero peach">
+      <p>계절별 순위</p>
+      <h1>봄, 여름, 가을, 겨울<br />계절감 있는 이름 보기.</h1>
+    </section>
+    <section class="panel controls-panel">
+      <label>
+        <span>계절 선택</span>
+        <select id="seasonal-season">
+          <option value="봄">봄</option>
+          <option value="여름">여름</option>
+          <option value="가을">가을</option>
+          <option value="겨울">겨울</option>
+        </select>
+      </label>
+      <label>
+        <span>구분</span>
+        <select id="seasonal-gender">
+          <option value="girl">여아 이름</option>
+          <option value="boy">남아 이름</option>
+        </select>
+      </label>
+    </section>
+    <section class="two-column">
+      <section class="panel">
+        <div class="panel-head"><div><p class="section-mini">계절 Top 10</p><h2>선택한 계절의 인기 이름</h2></div></div>
+        <div class="card-list compact" id="seasonal-list"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><p class="section-mini">계절 요약</p><h2>계절감 있는 해석</h2></div></div>
+        <div class="stats-grid" id="seasonal-summary"></div>
+      </section>
+    </section>
+  </main>
+  <script src="./data/baby-name-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

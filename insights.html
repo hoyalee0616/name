@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>트렌드·통계 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="insights">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a href="./generator.html">이름 짓기</a>
+      <a href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a href="./seasonal.html">계절별 순위</a>
+      <a class="is-active" href="./insights.html">트렌드·통계</a>
+      <a href="./special.html">특별한 이름</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero lime">
+      <p>트렌드·통계</p>
+      <h1>이름의 흐름을<br />길게 내려다보기.</h1>
+    </section>
+    <section class="two-column">
+      <section class="panel">
+        <div class="panel-head"><div><p class="section-mini">이름별 추세</p><h2>연도별 라인 보기</h2></div></div>
+        <label><span>이름 선택</span><select id="trend-name"></select></label>
+        <div class="chart-box" id="trend-chart"></div>
+        <div class="panel-note" id="trend-summary"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><p class="section-mini">통계 카드</p><h2>전체 데이터 한눈에</h2></div></div>
+        <div class="stats-grid" id="stats-overview"></div>
+        <div class="bar-stack" id="style-distribution"></div>
+      </section>
+    </section>
+    <section class="panel board-panel">
+      <div class="panel-head">
+        <div>
+          <p class="section-mini">연도별 1~100위</p>
+          <h2>한 번에 보는 전체 연도 랭킹 보드</h2>
+        </div>
+      </div>
+      <div class="controls-panel board-controls">
+        <label>
+          <span>보드 구분</span>
+          <select id="insight-gender">
+            <option value="girl">여아 이름</option>
+            <option value="boy">남아 이름</option>
+            <option value="all">통합 보기</option>
+          </select>
+        </label>
+      </div>
+      <div class="panel-note">각 연도 컬럼에 1위부터 100위까지 전부 넣어뒀어요. 좌우로 넘기면서 흐름을 한 번에 볼 수 있습니다.</div>
+      <div class="mega-board-wrap">
+        <div id="yearly-top100-board" class="mega-board"></div>
+      </div>
+    </section>
+  </main>
+  <script src="./data/baby-name-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
