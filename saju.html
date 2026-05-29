@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오행·사주 이름 | 애기 이름짓기</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="saju">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><img src="./logo.svg" width="34" height="34" alt="">애기 이름짓기</a>
+    <nav class="site-nav">
+      <a href="./generator.html">이름 짓기</a>
+      <a href="./search.html">이름 검색</a>
+      <a href="./ranking.html">연도별 순위</a>
+      <a href="./seasonal.html">계절별 순위</a>
+      <a href="./insights.html">트렌드·통계</a>
+      <a href="./special.html">특별한 이름</a>
+      <a class="is-active" href="./saju.html">오행·사주</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="page-hero pink">
+      <p>오행·사주</p>
+      <h1>엄마 아빠 이름의<br />기운을 물려받다.</h1>
+    </section>
+    <section class="two-column">
+      <form class="panel" id="saju-form">
+        <div class="panel-head"><div><p class="section-mini">부모 이름 입력</p><h2>이름 기운 분석</h2></div></div>
+        <label><span>엄마 이름</span><input type="text" id="saju-mom" maxlength="4" placeholder="예: 이지수" /></label>
+        <label><span>아빠 이름</span><input type="text" id="saju-dad" maxlength="4" placeholder="예: 김민준" /></label>
+        <label>
+          <span>아기 성별</span>
+          <select id="saju-gender">
+            <option value="neutral">중성적</option>
+            <option value="girl">여아</option>
+            <option value="boy">남아</option>
+          </select>
+        </label>
+        <label>
+          <span>태어날 계절 (선택)</span>
+          <select id="saju-season">
+            <option value="">선택 안 함</option>
+            <option value="봄">봄 (3~5월)</option>
+            <option value="여름">여름 (6~8월)</option>
+            <option value="가을">가을 (9~11월)</option>
+            <option value="겨울">겨울 (12~2월)</option>
+          </select>
+        </label>
+        <p class="panel-note">한글 이름을 입력해주세요. 소리오행(소리오행) 원리로 초성의 기운을 분석해 아이 이름 방향을 제안합니다.</p>
+        <button class="button button-dark button-wide" type="submit">오행 기운 분석하기</button>
+      </form>
+      <section class="panel">
+        <div class="panel-head"><div><p class="section-mini">오행이란?</p><h2>소리로 읽는 이름의 기운</h2></div></div>
+        <div class="ohaeng-intro-grid" id="ohaeng-intro"></div>
+        <p class="panel-note" style="margin-top:14px">소리오행은 이름 초성의 소리로 木·火·土·金·水 다섯 기운을 나누는 전통 작명 방식이에요. 부모 이름의 기운을 파악하고 아이 이름이 부족한 기운을 채울 수 있도록 도와드려요.</p>
+      </section>
+    </section>
+    <div id="saju-result"></div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
